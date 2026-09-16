@@ -1,6 +1,8 @@
-# Grade tracker 
+""" Grade tracker - Python program that reads students grades from a CSV file, calculates averages and letter grades, prints a summary to the terminal, and writes a full report to a text file. """
+
 import csv
 filepath = "data/students.csv"
+
 def load_students(filepath):
     """Reads the CSV file at filepath and returns a list of dictionaries. Returns an empty list if the file is not found."""
     students = []
@@ -84,6 +86,7 @@ def generate_report(students):
         "students": students_summary
     }    
     return report
+
 def write_report(report, filepath):
     """ """
     with open(filepath, "w") as file:
